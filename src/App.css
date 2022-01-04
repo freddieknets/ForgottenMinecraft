@@ -36,3 +36,57 @@
     transform: rotate(360deg);
   }
 }
+
+
+.home__title {
+  margin-bottom: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 36px;
+  color: cornflowerblue;
+}
+
+.home__text {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  line-height: 1px;
+  color: white;
+}
+
+.home__text--with-margin {
+  margin-bottom: 25px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  line-height: 1px;
+  color: white;
+}
+
+.home__text--names {
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  line-height: 1px;
+  color: white;
+}
+
+.home__evading-button {
+  position: absolute;
+  top: 45px;
+  left: -100px;
+  width: 500px;
+  height: 50px;
+  border: 1px solid cornflowerblue;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 22px;
+  line-height: 1px;
+  color: black;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgb(56, 51, 51);
+  transition: top 100ms 2s;
+}
+
+.home__evading-button:hover {
+  top: -1500px;
+  transition: top 500ms;
+}
