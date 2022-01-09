@@ -1,7 +1,9 @@
-import logo from './logo.svg';
+import logo from './creeper.png';
 import './App.css';
+import { useTitle } from 'react-use';
 
 function App() {
+  useTitle('Forgotten Minecraft admin by FreHar');
   return (
     <div className="App">
     <header className="App-header">

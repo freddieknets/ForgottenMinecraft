@@ -1,11 +1,9 @@
 const path = require('path');
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
-  output: {
-    path:path.resolve(__dirname, "dist"),
-  },
   module: {
     rules: [
       {
@@ -40,7 +38,16 @@ module.exports = {
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,
-        use: ['file-loader'],
+        use: [
+        {
+            loader: "file-loader",
+            options: {
+                name: '[name].[ext]',
+                outputPath: 'static/',
+                useRelativePath: true,
+            }
+        }
+      ]
       },
       {
         test: /\.svg$/,
@@ -50,7 +57,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
+      title: "Minecraft admin by FreHar",
       template: path.join(__dirname, "src", "index.html"),
     }),
   ],
-}
+};
