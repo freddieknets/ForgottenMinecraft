@@ -1,9 +1,10 @@
 const path = require('path');
-const webpack = require('webpack')
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: path.join(__dirname, "src", "index.js"),
+  target: 'web',
   module: {
     rules: [
       {
@@ -30,6 +31,12 @@ module.exports = {
              ["@babel/preset-react", {"runtime": "automatic"}]
             ]
           }
+        }
+      },
+      {
+        test: /\.html$/,
+        use:{
+          loader: 'html-loader'
         }
       },
       {
@@ -61,4 +68,7 @@ module.exports = {
       template: path.join(__dirname, "src", "index.html"),
     }),
   ],
+  output: {
+    filename: 'bundle.js',
+  },
 };

@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "css-loader": "^6.5.1",
     "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^5.0.0",
@@ -16,7 +17,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
-    "dev": "webpack serve --open --config webpack.dev.js",
+    "dev": "webpack serve --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
   },
   "eslintConfig": {
@@ -44,6 +45,7 @@
     "babel-loader": "^8.2.3",
     "html-webpack-plugin": "^5.5.0",
     "image-webpack-loader": "^8.0.1",
+    "react-refresh-webpack-plugin": "^0.1.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2",
